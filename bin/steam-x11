@@ -1,0 +1,2 @@
+#!/bin/sh
+env -u WAYLAND_DISPLAY steam
