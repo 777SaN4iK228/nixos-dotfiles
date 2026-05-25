@@ -1,0 +1,5 @@
+#!/bin/sh
+cd ~/nixos-dotfiles || exit
+git add .
+git commit -m "update"
+git push
