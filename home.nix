@@ -6,7 +6,7 @@
   home.stateVersion = "26.05";
 
   # ─────────────────────────────────────────────
-  # Dotfiles linking
+  # Dotfiles linking (Direct Nix-Store Copy)
   # ─────────────────────────────────────────────
 
   home.file.".config/hypr".source = ./dotfiles/hypr;
@@ -18,35 +18,8 @@
   home.file.".zshrc".source = ./dotfiles/.zshrc;
 
   home.file.".local/bin".source = ./bin;
+  home.file.".config/hypr/.luarc.json".enable = false;
 
-  # ─────────────────────────────────────────────
-  # Hyprland
-  # ─────────────────────────────────────────────
-
-  wayland.windowManager.hyprland = {
-    enable = true;
-  };
-
-  # ─────────────────────────────────────────────
-  # Waybar
-  # ─────────────────────────────────────────────
-
-  programs.waybar = {
-    enable = true;
-    package = pkgs.waybar;
-  };
-
-  # ─────────────────────────────────────────────
-  # Kitty terminal
-  # ─────────────────────────────────────────────
-
-  programs.kitty = {
-    enable = true;
-    font = {
-      name = "JetBrainsMono Nerd Font";
-      size = 12;
-    };
-  };
 
   # ─────────────────────────────────────────────
   # Packages

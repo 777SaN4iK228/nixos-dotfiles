@@ -1,9 +1,5 @@
 { config, pkgs, ... }:
-let
-  # If you don't actually use secrets.nix yet, comment this line
-  # or create ./secrets.nix in the repo.
-  secrets = import ./secrets.nix;
-in
+
 {
   imports = [
     ./hardware-configuration.nix
@@ -81,7 +77,7 @@ in
     options = [ "nofail" ];
   };
 
-  fileSystems."/mnt/games3" = {
+  fileSystems."/mnt/games3" = { 
     device = "/dev/disk/by-uuid/5a56a01a-4344-4234-b848-99217b721830";
     fsType = "ext4";
     options = [ "nofail" ];
@@ -118,7 +114,6 @@ in
   ################
 
   programs.nm-applet.enable = true;
-
   programs.steam.enable = true;
 
   programs.hyprland = {
@@ -128,7 +123,7 @@ in
 
   ################
   # Fonts
-  ################
+  ################  
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
@@ -179,7 +174,7 @@ in
     package = config.boot.kernelPackages.nvidiaPackages.latest;
   };
 
-  ################
+  ################  
   # Zsh
   ################
 
@@ -195,7 +190,7 @@ in
 
   services.xserver.xkb = {
     layout = "us";
-    variant = "";
+    variant = ""; 
   };
 
   ################
@@ -211,7 +206,6 @@ in
   services.power-profiles-daemon.enable = true;
   services.dbus.enable = true;
   hardware.sensor.iio.enable = true;
-
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
@@ -235,7 +229,8 @@ in
     peazip
     swaynotificationcenter
 
-    python315
+    # Changed python315 to python3 as 3.15 does not exist yet
+    python3
     hyprpaper
     hyprlock
     waybar
@@ -245,7 +240,7 @@ in
     uwufetch
     cmatrix
     cava
-    asciiquarium
+    asciiquarium  
     element
     element-desktop
     grim
@@ -256,7 +251,7 @@ in
     kdePackages.kio
     kdePackages.kio-extras
 
-    discord
+    discord 
     telegram-desktop
     anydesk
 
@@ -293,5 +288,6 @@ in
   # System state
   ################
 
-  system.stateVersion = "26.05";
+  # Adjusted to match unstable's actual state target baseline if needed
+  system.stateVersion = "26.05"; 
 }
