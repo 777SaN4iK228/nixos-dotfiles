@@ -1,7 +1,7 @@
 # 🧩 NixOS Dotfiles
 
 A clean, modular, flake‑based NixOS configuration with Hyprland, Home Manager, and fully managed dotfiles.  
-Everything is reproducible, version‑controlled, and script‑automated.
+Everything is reproducible, version‑controlled, and automated with simple scripts.
 
 ---
 
@@ -54,29 +54,34 @@ Everything is reproducible, version‑controlled, and script‑automated.
 ├── home.nix
 ├── flake.lock
 └── Wallpaper.png
+```
 
-3️⃣ What’s Inside
+---
 
-    Flake-based system
+## 3️⃣ What’s Inside
 
-    Home Manager integration
+- Flake‑based system  
+- Home Manager integration  
+- Hyprland setup  
+- Waybar, Rofi, Kitty configs  
+- Custom scripts for workflow automation  
+- Fully reproducible dotfiles  
 
-    Hyprland setup
+---
 
-    Waybar, Rofi, Kitty configs
+## 4️⃣ Recommended System Requirements
 
-    Custom scripts for workflow automation
+| Component | Minimum |
+|----------|----------|
+| **CPU** | 2 cores @ 2 GHz |
+| **RAM** | 4 GB |
+| **Storage** | 30 GB |
+| **Computer** | Must turn on 😄 |
 
-    Fully reproducible dotfiles
+---
 
-4️⃣ Recommended System Requirements
-Component	Minimum
-CPU	2 cores @ 2 GHz
-RAM	4 GB
-Storage	30 GB
-Computer	Must turn on 😄
+## 5️⃣ Notes
 
-5️⃣ Notes
-
-This repo contains my personal NixOS setup.
+This repo contains my personal NixOS setup.  
 Feel free to explore, fork, or use it as inspiration for your own config.
+
