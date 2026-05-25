@@ -19,6 +19,7 @@
 
   home.file.".local/bin".source = ./bin;
   home.file.".config/hypr/.luarc.json".enable = false;
+  home.file.".local/bin/push".source = ./bin/push;
 
 
   # ─────────────────────────────────────────────
