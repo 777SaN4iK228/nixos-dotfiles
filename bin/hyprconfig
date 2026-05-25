@@ -1,2 +1,2 @@
 #!/bin/sh
-sudo nano /home/dick/.config/hypr/hyprland.conf
+sudo nano ~/nixos-dotfiles/dotfiles/hypr/hyprland.conf

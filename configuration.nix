@@ -228,6 +228,7 @@
     kdePackages.ark
     peazip
     swaynotificationcenter
+    parted
 
     # Changed python315 to python3 as 3.15 does not exist yet
     python3

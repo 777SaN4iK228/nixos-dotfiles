@@ -1,2 +1,2 @@
 #!/bin/sh
-sudo nano /etc/nixos/configuration.nix
+sudo nano ~/nixos-dotfiles/configuration.nix
