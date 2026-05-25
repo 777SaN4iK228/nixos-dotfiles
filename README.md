@@ -12,7 +12,7 @@
 ---
 
 ## 2️⃣ Structure
-
+```bash
 ~/nixos-dotfiles/
 ├── bin/
 │   ├── push
