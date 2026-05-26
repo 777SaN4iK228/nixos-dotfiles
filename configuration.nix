@@ -21,6 +21,7 @@
     useOSProber = true;
     default = "saved";
   };
+  
 
   ################
   # Networking
@@ -208,6 +209,8 @@
   hardware.sensor.iio.enable = true;
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
+  services.xserver.enable = true;
+  services.xserver.displayManager.startx.enable = true;
 
   ################
   # Packages
@@ -229,6 +232,12 @@
     peazip
     swaynotificationcenter
     parted
+    gcc
+    gnumake
+    pkg-config
+    libX11
+    libXft
+    libXinerama
 
     # Changed python315 to python3 as 3.15 does not exist yet
     python3
