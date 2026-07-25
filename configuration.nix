@@ -240,6 +240,7 @@
     libXinerama
 
     # Changed python315 to python3 as 3.15 does not exist yet
+    python3Packages.cryptography
     python3
     hyprpaper
     hyprlock
@@ -263,7 +264,7 @@
 
     discord 
     telegram-desktop
-    anydesk
+   # anydesk
 
     firefox
     tor-browser

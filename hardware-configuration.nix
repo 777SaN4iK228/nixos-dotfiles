@@ -8,49 +8,24 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "uas" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/f1a3067b-803c-4046-a012-ef9549d07af9";
+    { device = "/dev/disk/by-uuid/b892fd1c-9c37-4cdb-bc60-570a83a41882";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/8115-176F";
+    { device = "/dev/disk/by-uuid/ABFA-A7AA";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  fileSystems."/mnt/games5" =
-    { device = "/dev/disk/by-uuid/634f8a94-2660-4c16-92c7-6307c8a2f863";
-      fsType = "ext4";
-    };
-
-  fileSystems."/mnt/games3" =
-    { device = "/dev/disk/by-uuid/5a56a01a-4344-4234-b848-99217b721830";
-      fsType = "ext4";
-    };
-
-  fileSystems."/mnt/games2" =
-    { device = "/dev/disk/by-uuid/f34bd9a6-97b1-41df-8834-ec16be76464d";
-      fsType = "ext4";
-    };
-
-  fileSystems."/mnt/games4" =
-    { device = "/dev/disk/by-uuid/2fd0890e-4872-4b7f-9799-c7c02fa09d2f";
-      fsType = "ext4";
-    };
-
-  fileSystems."/mnt/games1" =
-    { device = "/dev/disk/by-uuid/11013007-ce61-413e-9dd1-b19563cba234";
-      fsType = "ext4";
-    };
-
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/6b8e1ba9-3471-458f-b7a1-0d56be4769ef"; }
+    [ { device = "/dev/disk/by-uuid/0d4b24b9-9ee6-410f-aeb3-8e4191f85d85"; }
     ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
