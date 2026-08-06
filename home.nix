@@ -17,13 +17,14 @@
   home.file.".zprofile".source = ./dotfiles/.zprofile;
   home.file.".zshrc".source = ./dotfiles/.zshrc;
 
-  home.file.".local/bin".source = ./bin;
   home.file.".config/hypr/.luarc.json".enable = false;
-  home.file.".local/bin/push".source = ./bin/push;
-  home.file.".local/bin/hyprconfig".source = ./bin/hyprconfig;
-  home.file.".local/bin/config".source = ./bin/config;
-  home.file.".local/bin/update".source = ./bin/update;
-  home.file.".local/bin/steam-x11".source = ./bin/steam-x11;
+
+  # Define each file individually with execute permissions
+  home.file.".local/bin/push" = { source = ./bin/push; executable = true; };
+  home.file.".local/bin/hyprconfig" = { source = ./bin/hyprconfig; executable = true; };
+  home.file.".local/bin/config" = { source = ./bin/config; executable = true; };
+  home.file.".local/bin/update" = { source = ./bin/update; executable = true; };
+  home.file.".local/bin/steam-x11" = { source = ./bin/steam-x11; executable = true; };
 
   # ─────────────────────────────────────────────
   # Packages
